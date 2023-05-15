@@ -370,3 +370,189 @@ body{
 		gap: 24px;
 	}
 }
+
+
+/* 
+	pricing block
+*/
+.pricing{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+
+.pricing__info{
+	text-align: center;
+}
+
+.pricing__info h1{
+	font-size: bold;
+	font-size: 40px;
+	text-align: center;
+}
+
+.pricing__info p {
+	font-size: 14px;
+	font-weight: 500;
+	margin-top: 16px;
+	color: #666;
+}
+
+.pricing__card{
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	width: 60%;
+}
+
+.pricing__card__feature {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	width: 50%;
+	border-radius: 20px;
+	padding: 24px;
+	background-color: #faefff;
+}
+
+.pricing__card__feature .tab {
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+	background-color: #fff;
+	border-radius: 140px;
+	overflow: hidden;
+}
+
+.pricing__card__feature .tab div{
+	padding: 10px 24px;
+	font-size: 12px;
+	font-weight: 600;
+	border-radius: 140px;
+}
+
+.pricing__card__feature .tab div.active{
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.pricing__card__feature .list {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.pricing__card__feature .list__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pricing__card__feature .list__item svg.close{
+	padding: 2px;
+	background-color: #fafafa;
+	border-radius: 100%;
+}
+
+.pricing__card__feature .list__item svg.check{
+	padding: 2px;
+	background-color: var(--primary-color);
+	border-radius: 100%;
+}
+
+/* 
+	plan block
+*/
+.plan{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.plan__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid #eee;
+	border-radius: 12px;
+	transition: all 0.3s ease-in-out;
+}
+
+.plan__item:hover{
+	background-color: #fafafa;
+	cursor: pointer;
+}
+
+.plan__item__info h1{
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.plan__item__info button {
+	font-family: Manrope;
+	font-size: 10px;
+	padding: 3px 12px;
+	border-radius: 160px;
+	border: none;
+	background-color: #ffd4d4;
+	color: #dd3838;
+	margin-top: 8px;
+}
+
+.plan__item__price{
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.plan__item.active {
+	background-color: var(--primary-color);
+	color: #fff;
+	border: 1px solid var(--primary-color);
+	transition: all 0.3s ease-in-out;
+}
+
+.plan__item.active:hover{
+	background-color: #9d1fd8;
+	border: 1px solid #9d1fd8;
+}
+
+.plan__item.active button {
+	background-color: #edc7ff;
+	color: var(--primary-color);
+}
+
+/* 
+	responsive rules for pricing
+*/
+@media screen and (max-width: 1023px) {
+	.pricing {
+		padding: 0 16px;
+	}
+	.pricing__card {
+		width: 100%;
+		gap: 20px;
+	}
+
+	.pricing__info h1 {
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.pricing__card {
+		flex-direction: column;
+	}
+
+	.pricing__card__feature {
+		width: 100%;
+	}
+
+	.pricing__card .plan{
+		width: 100%;
+	}
+}
