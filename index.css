@@ -93,12 +93,12 @@ body{
 	
 	.header .header__menu .header__menu__ul{
 		display: none;
-		height: 90%;
+		height: 92%;
 		width: 100%;
 		position: absolute;
 		background-color: #eee;
 		left: 0;
-		top: 10%;
+		top: 8%;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -554,5 +554,106 @@ body{
 
 	.pricing__card .plan{
 		width: 100%;
+	}
+}
+
+
+/* 
+	footer block
+*/
+.footer {
+	margin-top: 120px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	background-color: #000;
+	color: #fff;
+	padding: 64px;
+}
+
+.footer__subscribe {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center	;
+}
+
+.footer__subscribe .info h1 {
+	font-size: 32px;
+	font-weight: 500;
+}
+
+.footer__subscribe .info p {
+	font-size: 14px;
+	font-weight: 500;
+	margin-top: 12px;
+}
+
+.footer__subscribe .form{
+	align-self: flex-end;
+}
+
+.footer__subscribe .form .form__control {
+	background-color: #f6e2ff;
+	border-radius: 160px;
+	padding-left: 20px;
+	width: 360px;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.footer__subscribe .form .form__control input {
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font-family: Manrope;
+	font-weight: 500;
+}
+
+.footer__subscribe .form .form__control button {
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 160px;
+	border: none;
+	font-family: Manrope;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer__subscribe .form .form__control button:hover {
+	background-color: var(--secondary-color);
+	color: #000;
+}
+
+.footer__company p {
+	font-size: 12px;
+	color: var(--secondary-color);
+}
+
+/* 
+	responsive design for footer block
+*/
+@media screen and (max-width: 1023px) {
+	.footer__subscribe {
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.footer__subscribe .info h1 {
+		text-align: center;
+	}
+
+	.footer__subscribe .info p {
+		text-align: center;
+	}
+
+	.footer__subscribe .form{
+		align-self: center;
+	}
+
+	.footer__company p {
+		text-align: center;
 	}
 }
