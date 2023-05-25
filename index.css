@@ -10,6 +10,10 @@
 	--large: 1200px;
 }
 
+.flex {
+	display: flex !important;
+}
+
 *{
 	box-sizing: border-box;
 	margin: 0;
@@ -597,7 +601,7 @@ body{
 	background-color: #f6e2ff;
 	border-radius: 160px;
 	padding-left: 20px;
-	width: 360px;
+	max-width: 360px;
 	display: flex;
 	justify-content: space-between;
 
@@ -628,20 +632,24 @@ body{
 }
 
 .footer__company p {
+	color: #fff;
 	font-size: 12px;
-	color: var(--secondary-color);
 }
 
 /* 
 	responsive design for footer block
 */
 @media screen and (max-width: 1023px) {
+	.footer{
+		padding: 20px;
+	}
 	.footer__subscribe {
 		flex-direction: column;
 		gap: 24px;
 	}
 
 	.footer__subscribe .info h1 {
+		font-size: 24px;
 		text-align: center;
 	}
 

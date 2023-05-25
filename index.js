@@ -1,9 +1,9 @@
 const menuToggle = () => {
 	let menu = document.querySelector('#menu');
-	if(menu.style.display == 'none') {
-		menu.style.display = 'flex';
+	if(menu.className === 'header__menu__ul') {
+		menu.className += ' flex';
 	}else {
-		menu.style.display = 'none';
+		menu.className = 'header__menu__ul';
 	}
 }
 
